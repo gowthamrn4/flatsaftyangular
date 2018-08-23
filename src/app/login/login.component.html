@@ -7,7 +7,7 @@
               <div class="login">
                  <div class="form-group">
                      <h1> Login </h1>
-                        <label for="email">User Name:</label>
+                        <label for="email"> Name:</label>
                             <input type="username" name="username" class="form-control" [ngClass]="{'is-invaild':submmitted && f.name.errors}" [(ngModel)]="name" id="username" placeholder="User Name" required="">
                             <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
                                 <div *ngIf="f.name.errors.required">Name is required</div>
