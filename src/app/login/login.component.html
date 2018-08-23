@@ -1,32 +1,26 @@
 <div class="body">
 <!---login page-->
 <div class="container">
-    <form #personForm="ngForm" [formGroup]="myform" (ngSubmit)="onSubmit(personForm.value)" >
+    <form #personForm="ngForm"(ngSubmit)="onSubmit(personForm.value)" >
        <div class="row">
           <div class="col-md-4">
               <div class="login">
                  <div class="form-group">
                      <h1> Login </h1>
-                        <label for="email"> Name:</label>
-                            <input type="username" name="username" class="form-control" [ngClass]="{'is-invaild':submmitted && f.name.errors}" [(ngModel)]="name" id="username" placeholder="User Name" required="">
-                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                                <div *ngIf="f.name.errors.required">Name is required</div>
-                            </div>
-                        </div>
+                        <label for="email">User-Name:</label>
+                            <input type="username" name="username" class="form-control" [(ngModel)]="name" id="username" placeholder="User Name" required>
+                 </div>
                   
              <div class="form-group">
                  <label for="pwd">Password:</label>
-                 <input type="password" name="password" [ngClass]="{'is-invaild':submmitted && f.password.errors}" [(ngModel)]="password" class="form-control" id="password" 
+                 <input type="password" name="password"  [(ngModel)]="password" class="form-control" id="password" 
                  placeholder="Password" required="">
-                 <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                    <div *ngIf="f.password.errors.required">Password is required</div>
-                </div>
-             </div>
+            </div>
             <button class="btn btn-default btn-round">Login</button>
               </div>
-          </div>
+        </div>
           
-         <div class="col-md-2">
+         <div class="ng col-md-2">
              <div class="v1">
             </div>
         </div>

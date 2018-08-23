@@ -6,12 +6,15 @@ import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms'
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent  {
   
   onSubmit = function (user) {
     console.log(user);
   }
-
+  form = new FormGroup({
+    name: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
+});
 
   ngOnInit() {
    
