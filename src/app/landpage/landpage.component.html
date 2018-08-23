@@ -1,0 +1,84 @@
+<body>
+<div class="container-fluid">
+     <div class="header">
+        <div class="row">
+           <div class="col-md-6"></div>
+               <div class="col-md-6"></div>
+       </div>
+    </div>
+
+    <div class="menu">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand"><h2 style="color:orange;">Apartment</h2></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li>
+                           <a class="nav-link" routerLinkActive="active" routerLink="/landpage/home">Home </a>
+                       </li>
+                       <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" routerLinkActive="active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             News
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" routerLinkActive="active" routerLink="/landpage/newnews">New News</a>
+                                <a class="dropdown-item"routerLinkActive="active" routerLink="/landpage/oldnews">Old News</a>
+                          </div>
+                       </li>
+                       <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" routerLinkActive="active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Complaint
+                          </a>
+                          <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item"routerLinkActive="active" routerLink="/landpage/newcomplaint">New Complaint</a>
+                                <a class="dropdown-item"routerLinkActive="active"routerLink="/landpage/oldcomplaint">Old Complaint</a>
+                          </div>
+                       </li>
+                       <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Request
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" routerLinkActive="active" routerLink="/landpage/newrequest">New Request</a>
+                                <a class="dropdown-item" routerLinkActive="active" routerLink="/landpage/oldrequest">Old Request</a>
+                          </div>
+                       </li>
+                       <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Maintenance
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" routerLinkActive="active" routerLink="/landpage/newmaintenance">New Maintenance</a>
+                                <a class="dropdown-item" routerLinkActive="active" routerLink="/landpage/oldmaintenance">Old Maintenance</a>
+                          </div>
+                       </li>
+                       <li>
+                          <a class="nav-link" routerLink="/login" >Logout </a>
+                      </li>
+                    </ul>  
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="border-radius:20px;">
+                        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" style="border-radius:20px;">Search</button>
+                    </form>
+                </div>
+             </nav>
+         </div>
+     </div>
+</div>
+
+<router-outlet></router-outlet>
+ 
+
+<br>
+<div class="container">
+     <div class="footer">
+         <div class="row">
+            <div class="col-md-12"><span>Triodesk @Copy rights 2018</span></div> 
+        </div>
+    </div>
+</div>
+</body>
