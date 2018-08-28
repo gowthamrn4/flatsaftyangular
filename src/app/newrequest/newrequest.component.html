@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="container" style="height:500px;border-radius:20px;">
+    <div class="container" style="height:auto;border-radius:20px;">
       <br>
       <h4>New Request</h4>
       <div class="table-responsive">
@@ -13,34 +13,14 @@
         </tr>
       </thead>
       <tbody>
-          <tr>
-              <td>gowthamrn</td>
-              <td>00046578</td>
-              <td>Request1</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
+          <tr *ngFor="let newRequest of newRequest">
+              <td>{{newRequest.requestid}}</td>
+              <td>{{newRequest.username}}</td>
+              <td>{{newRequest.request}}</td>
+              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a>
+              <a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
           </tr>
-          <tr>
-              <td>Rahul</td>
-              <td>0454006578</td>
-              <td>Request2</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
-          </tr>
-          <tr>
-              <td>karthi</td>
-              <td>076578</td>
-              <td>Request3</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
-          </tr>
-          <tr>
-              <td>gowri</td>
-              <td>2300678</td>
-              <td>Request4</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
-          </tr>
+          
            </tbody>
           </table>
         </div>

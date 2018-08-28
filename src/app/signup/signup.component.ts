@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/Http';
+import {DataService} from '../data.service'
 
 @Component({
   selector: 'app-signup',
@@ -8,8 +9,15 @@ import { HttpClient } from '@angular/common/Http';
 })
 
 export class SignupComponent  {
-  onSubmit = function (user) {
-    console.log(user);
+
+  constructor(private dataservice:DataService){}
+  // onSubmit = function (user) {
+  //   console.log(user);
+  // }
+  onSubmit(value){
+    this.dataservice.newUser(value).subscribe(res=>{
+      console.log
+    })
   }
 }
             

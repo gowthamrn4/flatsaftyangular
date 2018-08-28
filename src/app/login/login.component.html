@@ -10,10 +10,10 @@
                       <label for="email">User Name:</label>
                           <input type="username" name="username" class="form-control" id="name" [(ngModel)]="name" placeholder="User Name"  #Username="ngModel" minlength="6" required  ngModel>
                           <div *ngIf="Username.errors && (Username.touched|| Username.dirty)" class="alert text-light">
-                           <div [hidden]="!Username.errors.required">
+                           <div style="font-size:15px;padding:0px;" [hidden]="!Username.errors.required">
                                Username requried
                              </div>
-                             <div [hidden]="!Username.errors.minlength">
+                             <div style="font-size:15px;padding:0px;" [hidden]="!Username.errors.minlength">
                                 Please enter minimum 6 character
                              </div>
                        </div>        
@@ -31,7 +31,10 @@
                        </div>
                  </div>
                 </div>
-            <button class="btn btn-default btn-round">Login</button>
+                <div class="text-center">
+                        <button (click)="onSubmit1()" class="btn btn-default btn-round" [disabled]="!personForm.form.valid" >Login</button>
+
+                </div>
               </div>
         </div>
           
@@ -46,11 +49,14 @@
         </div>
 
         <div class="col-md-6">
-            <h1>Apartment  </h1>
-               <p style="color:white;font-size:19px;">Openness on three sides of every apartment allows for free flow of air, and so the entire house is cooler by a few degrees, keeping it fresh and veil-ventilated.</p>
+            <h1 id="heading">Apartment  </h1>
+               <p id="p" style="color:white;font-size:19px;">Openness on three sides of every apartment allows for free flow of air, and so the entire house is cooler by a few degrees, keeping it fresh and veil-ventilated.</p>
                <br>
-               <p style="color:white;">If you are new user </p>
-               <a class="btn btn-default" style="background-color:white;" routerLink="/signup">Please Signup..</a>
+               <div class="text-center">
+                    <p style="color:white;">If you are new user </p>
+                    <a  style="color:white;text-decoration:underline;" routerLink="/signup">Please Signup?</a>
+               </div>
+              
        </div>
       </div>
    </form> 

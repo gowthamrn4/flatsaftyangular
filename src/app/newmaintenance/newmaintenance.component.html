@@ -1,47 +1,27 @@
 <div class="content">
-    <div class="container" style="height:500px;border-radius:20px;">
+    <div class="container" style="height:auto;border-radius:20px;">
       <br>
       <h4>New Maintenance</h4>
       <div class="table-responsive">
           <table id="table" class="table table-hover">
   <thead>
       <tr>
-          <th>Username</th>
-          <th>Apartment No</th>
-          <th>Maintenance</th>
-           <th>Action</th>
+          <th>ID</th>
+          <th>Category</th>
+          <th>Section</th>
+          <th>Remarks</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
-          <tr>
-              <td>gowthamrn</td>
-              <td>00046578</td>
-              <td>maintenance1</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
+          <tr *ngFor="let newMaintenance of newMaintenance">
+              <td>{{newMaintenance._id}}</td>
+              <td>{{newMaintenance.category}}</td>
+              <td>{{newMaintenance.section}}</td>
+              <td>{{newMaintenance.remarks}}</td>
+              <td><a href="#"><img src="assets/img/Delete.png" width="25" height="25"></a>
+              <a href="#"><img src="assets/img/edit.png" width="25" height="25"></a></td>
           </tr>
-          <tr>
-              <td>Rahul</td>
-              <td>0454006578</td>
-              <td>maintenance2</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
-          </tr>
-          <tr>
-              <td>karthi</td>
-              <td>076578</td>
-              <td>maintenance3</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
-          </tr>
-          <tr>
-              <td>gowri</td>
-              <td>2300678</td>
-              <td>maintenance4</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
-          </tr>
-           </tbody>
           </table>
         </div>
     </div>

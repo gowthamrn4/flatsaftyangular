@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from '../data.service'
+import {Http} from '@angular/http';
+import { map } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-oldnews',
@@ -6,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./oldnews.component.css']
 })
 export class OldnewsComponent implements OnInit {
-
-  constructor() { }
+  oldNews:any;
+  constructor(private dataservice:DataService,private http:Http) { }
 
   ngOnInit() {
+    this.dataservice.getoldNews().subscribe(res=>{
+      this.oldNews=res;
+      for(var i=0;i<this.oldNews.length;i++){
+        console.log(res);
+      }
+  })
   }
 
 }

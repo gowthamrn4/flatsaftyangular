@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="container" style="height:500px;border-radius:20px;">
+    <div class="container" style="height:auto;border-radius:20px;">
       <br>
       <h4>Old Maintenance</h4>
       <div class="table-responsive">
@@ -13,34 +13,14 @@
         </tr>
       </thead>
       <tbody>
-          <tr>
-              <td>gowthamrn</td>
-              <td>00046578</td>
-              <td>Maintenance1</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
-          </tr>
-          <tr>
-              <td>Rahul</td>
-              <td>0454006578</td>
-              <td>Maintenance2</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
-          </tr>
-          <tr>
-              <td>karthi</td>
-              <td>076578</td>
-              <td>Maintenance3</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
-          </tr>
-          <tr>
-              <td>gowri</td>
-              <td>2300678</td>
-              <td>Maintenance4</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a></td>
-              <td><a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
-          </tr>
+        <tr *ngFor="let oldMaintenance of oldMaintenance">
+            <td>{{oldMaintenance.maintenanceid}}</td>
+            <td>{{oldMaintenance.username}}</td>
+            <td>{{oldMaintenance.maintenance}}</td>
+            <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a>
+            <a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>
+        </tr>
+          
            </tbody>
           </table>
         </div>
