@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { AngularFireModule } from 'angularfire2';
+import {AngularFireAuthModule} from 'angularfire2/auth';
 
 
 import { AppComponent } from './app.component';
@@ -23,9 +24,23 @@ import { OldmaintenanceComponent } from './oldmaintenance/oldmaintenance.compone
 import { SignupComponent } from './signup/signup.component';
 
 import {DataService} from './data.service';
+import {AuthService} from './service/auth.service';
 import { NewMaintenanceViewPageComponent } from './new-maintenance-view-page/new-maintenance-view-page.component';
 import { NewRequestViewpageComponent } from './new-request-viewpage/new-request-viewpage.component';
-import { NewComplaintViewPageComponent } from './new-complaint-view-page/new-complaint-view-page.component'
+import { NewComplaintViewPageComponent } from './new-complaint-view-page/new-complaint-view-page.component';
+
+
+
+var config = {
+  apiKey: "AIzaSyD-tiwmRUCcS1cgrQJDlLsYNRl5TpWQdr8",
+  authDomain: "flatsafetyweb.firebaseapp.com",
+  databaseURL: "https://flatsafetyweb.firebaseio.com",
+  projectId: "flatsafetyweb",
+  storageBucket: "flatsafetyweb.appspot.com",
+  messagingSenderId: "972829941535"
+};
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +63,9 @@ import { NewComplaintViewPageComponent } from './new-complaint-view-page/new-com
   imports: [
     BrowserModule,
     FormsModule,
-   HttpModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(config),
+    HttpModule,
     RouterModule.forRoot([
       { path:'',pathMatch:'full',redirectTo:'login' },
       { path:'login',component:LoginComponent},
@@ -74,11 +91,13 @@ import { NewComplaintViewPageComponent } from './new-complaint-view-page/new-com
     
   ],
   
-  providers: [DataService],
+  providers: [DataService,
+              AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 
+<<<<<<< HEAD
 /*export const firebaseConfig = {
   apikey:'',
   authDomain:'',
@@ -87,3 +106,12 @@ export class AppModule { }
   messagingSenderId:''
 };
 */
+=======
+// export const firebaseConfig = {
+//   apikey:'',
+//   authDomain:'',
+//   databaseURL:'',
+//   storageBucket:'',
+//   messagingSenderId:''
+// };
+>>>>>>> 8bfd58108f447282b88f30b886b64ef0c46f1323
