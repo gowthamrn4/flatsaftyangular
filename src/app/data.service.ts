@@ -2,6 +2,11 @@ import { Injectable } from '@angular/core';
 import {Http} from '@angular/http';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { whenRendered } from '@angular/core/src/render3';
+import { checkAndUpdateQuery } from '@angular/core/src/view/query';
+import { Headers } from '@angular/http';
+
+import { database } from 'firebase';
 // import 'rxjs/add/operator/map'
 // import { map } from 'rxjs/operators';
 
@@ -19,6 +24,9 @@ export class DataService {
   oldComplaint:any;
   oldMaintenance:any;
   oldRequest:any;
+  news:any;
+  status:any;
+  url:"http://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/newnews";
   
 
   constructor( private http:Http,private router:Router) { }
@@ -52,9 +60,7 @@ export class DataService {
   }
   getnewNews(value){
     return this.http.post('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/newnews',value)
-    .pipe(map(data3 =>{
-      console.log(data3)
-    }))
+    
   }
   getnewComplaint(){
     return this.http.get('https://flatsafety.herokuapp.com/complients/getAllComplients')
@@ -80,8 +86,8 @@ export class DataService {
     return this.http.get('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/oldmaintenance')
     .pipe(map(data=>this.oldMaintenance=data.json()))
   }
-  getoldNews(){
-    return this.http.get('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/oldnews')
+  getNews(){
+     return this.http.get('http://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/newnews')
     .pipe(map(data=>this.oldNews=data.json()))
   }
   getnewLogin()

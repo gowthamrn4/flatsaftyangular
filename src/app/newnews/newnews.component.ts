@@ -9,6 +9,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./newnews.component.css']
 })
 export class NewnewsComponent  {
+  status = 1;
   langs: string[] = [
     'Function',
     'Emergency',

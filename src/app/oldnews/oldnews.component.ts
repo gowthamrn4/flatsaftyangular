@@ -14,7 +14,7 @@ export class OldnewsComponent implements OnInit {
   constructor(private dataservice:DataService,private http:Http) { }
 
   ngOnInit() {
-    this.dataservice.getoldNews().subscribe(res=>{
+    this.dataservice.getNews().subscribe(res=>{
       this.oldNews=res;
       for(var i=0;i<this.oldNews.length;i++){
         console.log(res);

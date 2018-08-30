@@ -18,6 +18,14 @@
                     <input type="text" name="head" [(ngModel)]="head" id="head"  class="form-control" placeholder="Add Heading"minlength="3" required  ngModel>
                 </div>
             </div><br>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>News Subject</h5>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" name="subject" [(ngModel)]="subject" id="subject"  class="form-control" placeholder="Add Subject"minlength="3" required  ngModel>
+                </div>
+            </div><br>
             <!-----------type of news----------->
         <div class="newstype">
             <div class="row">
@@ -46,11 +54,13 @@
                         </div>
                     </div>
                 </div><br>
+                <input type="hidden" name="status" id="status" [(ngModel)]="status" value="{{status}}" placeholder="1">
+                <input type="hidden" name="time" id="time" [(ngModel)]="time" value="{{today | date:'dd-MM-yyyy hh:mm:ss a':'+0530'}}">
                 <div class="button">
                     <div class="row">
                         <div class="col-md-12">
                              <button class="btn btn-warning btn-round" (click)="onSubmitnews()"  [disabled]="!personForm.form.valid">Post</button>
-                        ||
+                        |
                             <input type="reset" class="btn btn-warning btn-round" value="Clear">
                         </div>
                     </div>

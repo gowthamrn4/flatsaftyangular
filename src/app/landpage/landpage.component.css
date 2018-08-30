@@ -82,13 +82,9 @@ a.router-link-active
 {  
 	height:50px;
 	background-color:white;
-	text-align:center;
 	box-shadow:20px 20px 120px 16px  #FF8C00;  
 }
 a{
 	font-weight: 400;
 }
-.footer span
-{
-	padding:20px;
-}
+
