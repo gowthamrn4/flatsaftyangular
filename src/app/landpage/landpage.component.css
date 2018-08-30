@@ -47,6 +47,7 @@ hr
 li
 {
 	background-color:orange;
+	color:white;
 }
   
 li:hover
@@ -86,5 +87,6 @@ a.router-link-active
 }
 a{
 	font-weight: 400;
+	color:white;
 }
 

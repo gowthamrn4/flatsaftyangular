@@ -87,7 +87,7 @@ export class DataService {
     .pipe(map(data=>this.oldMaintenance=data.json()))
   }
   getNews(){
-     return this.http.get('http://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/newnews')
+     return this.http.get('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/newnews')
     .pipe(map(data=>this.oldNews=data.json()))
   }
   getnewLogin()
