@@ -22,7 +22,10 @@ import { NewmaintenanceComponent } from './newmaintenance/newmaintenance.compone
 import { OldmaintenanceComponent } from './oldmaintenance/oldmaintenance.component';
 import { SignupComponent } from './signup/signup.component';
 
-import {DataService} from './data.service'
+import {DataService} from './data.service';
+import { NewMaintenanceViewPageComponent } from './new-maintenance-view-page/new-maintenance-view-page.component';
+import { NewRequestViewpageComponent } from './new-request-viewpage/new-request-viewpage.component';
+import { NewComplaintViewPageComponent } from './new-complaint-view-page/new-complaint-view-page.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,13 +40,15 @@ import {DataService} from './data.service'
     OldcomplaintComponent,
     NewmaintenanceComponent,
     OldmaintenanceComponent,
-    SignupComponent
+    SignupComponent,
+    NewMaintenanceViewPageComponent,
+    NewRequestViewpageComponent,
+    NewComplaintViewPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+   HttpModule,
     RouterModule.forRoot([
       { path:'',pathMatch:'full',redirectTo:'login' },
       { path:'login',component:LoginComponent},
@@ -60,6 +65,9 @@ import {DataService} from './data.service'
       { path:'oldrequest',component:OldrequestComponent},
       { path:'newmaintenance',component:NewmaintenanceComponent},
       { path:'oldmaintenance',component:OldmaintenanceComponent},
+      { path:'newmaintenanceviewpage/:id',component:NewMaintenanceViewPageComponent},
+      { path:'newrequestviewpage/:id',component:NewRequestViewpageComponent},
+      { path:'newcomplaintviewpage/:id',component:NewComplaintViewPageComponent}
     ]},
        ])
 
@@ -69,6 +77,7 @@ import {DataService} from './data.service'
   providers: [DataService],
   bootstrap: [AppComponent]
 })
+export class AppModule { }
 
 export const firebaseConfig = {
   apikey:'',

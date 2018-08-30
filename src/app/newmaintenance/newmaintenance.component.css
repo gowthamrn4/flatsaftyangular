@@ -11,3 +11,35 @@
 {
 padding-bottom:250px;
 }
+#del
+{
+  background-color:red;
+  color:white;
+  border:3px solid red;
+  border-radius:10px;
+
+}
+#del{
+
+  padding:5px;
+  width:30px;
+  height:32px;
+  
+}
+
+#edt{
+  
+  padding:5px;
+  width:30px;
+  height:32px;
+  
+}
+#edt
+{
+  background-color:green;
+  color:white;
+  border:3px solid green;
+  border-radius:10px;
+  margin-left:4px;
+ 
+}

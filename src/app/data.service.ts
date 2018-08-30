@@ -50,20 +50,22 @@ export class DataService {
       }
     }))
   }
-  getnewNews(){
-    return this.http.get('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/newnews')
-    .pipe(map(data=>this.newNews=data.json()))
+  getnewNews(value){
+    return this.http.post('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/newnews',value)
+    .pipe(map(data3 =>{
+      console.log(data3)
+    }))
   }
   getnewComplaint(){
-    return this.http.get('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/newcomplaint')
+    return this.http.get('https://flatsafety.herokuapp.com/complients/getAllComplients')
     .pipe(map(data=>this.newComplaint=data.json()))
   }
   getnewMaintenance(){
-    return this.http.get('https://fierce-inlet-19946.herokuapp.com/maintenace/getAllMaintence')
+    return this.http.get('https://flatsafety.herokuapp.com/maintenace/getAllMaintence')
     .pipe(map(data=>this.newMaintenance=data.json()))
   }
   getnewRequest(){
-    return this.http.get('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/newrequest')
+    return this.http.get('https://flatsafety.herokuapp.com/riseReqs/getAllRiseReqs')
     .pipe(map(data=>this.newRequest=data.json()))
   }
   getoldComplaint(){

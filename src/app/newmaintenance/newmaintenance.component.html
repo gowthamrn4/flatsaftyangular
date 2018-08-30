@@ -1,26 +1,32 @@
 <div class="content">
     <div class="container" style="height:auto;border-radius:20px;">
       <br>
-      <h4>New Maintenance</h4>
+      <h4 class="text-center">New Maintenance</h4>
       <div class="table-responsive">
           <table id="table" class="table table-hover">
   <thead>
       <tr>
-          <th>ID</th>
-          <th>Category</th>
-          <th>Section</th>
-          <th>Remarks</th>
+          <th>No</th>
+          <th>Name</th>
+          <th>Block</th>
+          <th>Floor</th>
+          <th>Flat No</th>
+          <th>Contact</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let newMaintenance of newMaintenance">
-              <td>{{newMaintenance._id}}</td>
-              <td>{{newMaintenance.category}}</td>
-              <td>{{newMaintenance.section}}</td>
-              <td>{{newMaintenance.remarks}}</td>
-              <td><a href="#"><img src="assets/img/Delete.png" width="25" height="25"></a>
-              <a href="#"><img src="assets/img/edit.png" width="25" height="25"></a></td>
+          <tr *ngFor="let newMaintenance of newMaintenance let i = index">
+              <td>{{1+i}}</td>
+              <td>{{newMaintenance.name}}</td>
+              <td>{{newMaintenance.block}}</td>
+              <td>{{newMaintenance.floor}}</td>
+              <td>{{newMaintenance.flatno}}</td>
+              <td>{{newMaintenance.contact}}</td>
+              <td class="icon"><!--<a href=""><i id="del" class="fa fa-trash text-center" aria-hidden="true"></i></a>
+                               <a routerLink="/landpage/newmaintenanceviewpage/{{newMaintenance._id}}"><i id="edt" class="fa fa-pencil-square-o text-center" aria-hidden="true"></i></a>-->
+              <a routerLink="/landpage/newmaintenanceviewpage/{{newMaintenance._id}}"><button class="btn btn-warning btn-round">View</button></a>
+                            </td>
           </tr>
           </table>
         </div>
