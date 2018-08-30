@@ -1,72 +1,79 @@
 <div class="body">
-<!---login page-->
-<div class="container">
-    <form #personForm="ngForm"(ngSubmit)="onSubmit(personForm.value)" >
-       <div class="row">
-          <div class="col-md-4">
-              <div class="login">
-                <div class="form-group">
-                    <h1> Login</h1>
-                      <label for="email">User Name:</label>
-                          <input type="username" name="username" class="form-control" id="name" [(ngModel)]="name" placeholder="User Name"  #Username="ngModel" minlength="6" required  ngModel>
-                          <div *ngIf="Username.errors && (Username.touched|| Username.dirty)" class="alert text-light">
-                           <div style="font-size:15px;padding:0px;" [hidden]="!Username.errors.required">
-                               Username requried
-                             </div>
-                             <div style="font-size:15px;padding:0px;" [hidden]="!Username.errors.minlength">
-                                Please enter minimum 6 character
-                             </div>
-                       </div>        
-                       </div> 
-                  
-                 <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input type="password" name="password" id="password" class="form-control" [(ngModel)]="password" placeholder="Password" #Password="ngModel" minlength="8" required  ngModel>
-                    <div *ngIf="Password.errors && (Password.touched|| Password.dirty)" class="alert text-light">
-                     <div [hidden]="!Password.errors.required">
-                         Password requried
-                       </div>
-                       <div [hidden]="!Password.errors.minlength">
-                          Please enter minimum 8 character
-                       </div>
-                 </div>
+    <!---login page-->
+    <div class="container">
+        <div class="text-center" *ngIf="!isNewUser">
+            <p *ngIf="errorMessage.length > 0" class="text-danger">
+                {{errorMessage}}</p>
+
+            <p *ngIf="error.message.length > 0" class="text-danger">
+                {{error.message}}</p>
+            <form #personForm="ngForm" (ngSubmit)="onLogin(personForm.value)">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="login">
+                            <div class="form-group">
+                                <h1> Login</h1>
+                                <label for="email">User Name:</label>
+                                <input type="username" name="email" class="form-control" id="name" [(ngModel)]="email" placeholder="User Name" #Username="ngModel" minlength="6" required ngModel>
+                                <div *ngIf="Username.errors && (Username.touched|| Username.dirty)" class="alert text-light">
+                                    <div style="font-size:15px;padding:0px;" [hidden]="!Username.errors.required">
+                                        Username requried
+                                    </div>
+                                    <div style="font-size:15px;padding:0px;" [hidden]="!Username.errors.minlength">
+                                        Please enter minimum 6 character
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" name="password" id="password" class="form-control" [(ngModel)]="password" placeholder="Password" #Password="ngModel" minlength="8" required ngModel>
+                                <div *ngIf="Password.errors && (Password.touched|| Password.dirty)" class="alert text-light">
+                                    <div [hidden]="!Password.errors.required">
+                                        Password requried
+                                    </div>
+                                    <div [hidden]="!Password.errors.minlength">
+                                        Please enter minimum 8 character
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button (click)="onSubmit1()" class="btn btn-default btn-round" [disabled]="!personForm.form.valid">Login</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ng col-md-2">
+                        <div class="v1">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="hr">
+                    </div>
+
+                    <div class="col-md-6">
+                        <h1 id="heading">Apartment </h1>
+                        <p id="p" style="color:white;font-size:19px;">Openness on three sides of every apartment allows for free flow of air, and so the entire house is cooler by a few degrees, keeping it fresh and veil-ventilated.</p>
+                        <br>
+                        <div class="text-center">
+                            <p style="color:white;">If you are new user </p>
+                            <a style="color:white;text-decoration:underline;" routerLink="/signup">Please Signup?</a>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="text-center">
-                        <button (click)="onSubmit1()" class="btn btn-default btn-round" [disabled]="!personForm.form.valid" >Login</button>
-
-                </div>
-              </div>
+            </form>
         </div>
-          
-         <div class="ng col-md-2">
-             <div class="v1">
-            </div>
-        </div>
+    </div>
 
-         <br>
 
-        <div class="hr">
-        </div>
 
-        <div class="col-md-6">
-            <h1 id="heading">Apartment  </h1>
-               <p id="p" style="color:white;font-size:19px;">Openness on three sides of every apartment allows for free flow of air, and so the entire house is cooler by a few degrees, keeping it fresh and veil-ventilated.</p>
-               <br>
-               <div class="text-center">
-                    <p style="color:white;">If you are new user </p>
-                    <a  style="color:white;text-decoration:underline;" routerLink="/signup">Please Signup?</a>
-               </div>
-              
-       </div>
-      </div>
-   </form> 
+    <br>
+    <br>
+
+
+
 </div>
-
-
-
-<br>
-<br>
-
-
-                                                 
-                             </div>                           
