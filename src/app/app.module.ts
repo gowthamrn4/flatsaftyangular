@@ -79,10 +79,11 @@ import { NewComplaintViewPageComponent } from './new-complaint-view-page/new-com
 })
 export class AppModule { }
 
-export const firebaseConfig = {
+/*export const firebaseConfig = {
   apikey:'',
   authDomain:'',
   databaseURL:'',
   storageBucket:'',
   messagingSenderId:''
 };
+*/

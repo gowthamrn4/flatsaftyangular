@@ -7,14 +7,14 @@
 {
 border-top-right-radius: 14px;
 border-bottom-right-radius: 14px;
-border-top-left-radius: 13px;
+border-top-left-radius: 14px;
 border-bottom-left-radius: 14px;
 font-size:20px;
 padding:2px;
 }
 .container-fluid
 {
-	background-color:orange;
+	background-image:url("/assets/img/03-01.jpg");
 	color:white;
     font-size:23px;
 	
@@ -31,7 +31,7 @@ padding:2px;
 
 body
 {
-	background-color:orange;
+	background-image:url("/assets/img/03-01.jpg");
 }
 .box
 {
@@ -47,7 +47,6 @@ hr
 li
 {
 	background-color:orange;
-	color:white;
 }
   
 li:hover
@@ -87,6 +86,5 @@ a.router-link-active
 }
 a{
 	font-weight: 400;
-	color:white;
 }
 
