@@ -3,10 +3,10 @@
   background-color:white;
   opacity:0.9;
   margin-top:20px;
- box-shadow:20px 20px 120px 16px  #FF4F00;  
+ /*box-shadow:20px 20px 120px 16px  #FF4F00;  */
  margin:0px auto;
- background-image:url("/assets/img/bright-background-with-dots_1055-3132.jpg");
- background-attachment:fixed;
+ /* background-image:url("/assets/img/bright-background-with-dots_1055-3132.jpg");
+ background-attachment:fixed; */
 }
 #head
 {

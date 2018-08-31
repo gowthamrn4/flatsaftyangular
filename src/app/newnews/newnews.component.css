@@ -3,38 +3,20 @@
   background-color:white;
   opacity:0.9;
   margin-top:20px;
-  box-shadow:20px 20px 120px 16px  #FF4F00;  
-  background-image:url("/assets/img/bright-background-with-dots_1055-3132.jpg");
- background-attachment:fixed;
+  /*box-shadow:20px 20px 120px 16px  #FF4F00;  */
 }
 h5{
   text-justify: inter-word;
     text-align: justify;
     float:right;
 }
-input{
-  
-  text-align: center;
-}
-input:hover{
-  background: rgb(253, 115, 51);
-  border-radius:20px;
+button
+{
+  background: #ffc107 ;
   color:white;
-  text-align: center;
+  width:100px;
 }
-button:hover{
-  border-radius:20px;
-  color:white;
-}
-select:hover{
-  background: rgb(253, 115, 51);
-  border-radius:20px;
-  color:white;
-  text-align: center;
-}
-option:hover{
-  background: rgb(253, 115, 51);
-  border-radius:20px;
-  color:white;
-  text-align: center;
+input[type=reset]
+{
+  background: #ffc107 ;
 }

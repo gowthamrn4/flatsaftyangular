@@ -15,7 +15,7 @@
                     <h5>Add News heading</h5>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="head" [(ngModel)]="head" id="head"  class="form-control" placeholder="Add Heading"minlength="3" required  ngModel>
+                    <input type="text" name="heading" id="heading"  class="form-control" placeholder="Add Heading"required  ngModel>
                 </div>
             </div><br>
             <div class="row">
@@ -23,10 +23,10 @@
                     <h5>News Subject</h5>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="subject" [(ngModel)]="subject" id="subject"  class="form-control" placeholder="Add Subject"minlength="3" required  ngModel>
+                    <input type="text" name="subject"  id="subject"  class="form-control" placeholder="Add Subject" required  ngModel>
                 </div>
             </div><br>
-            <!-----------type of news----------->
+            <!-----------type of news-----------
         <div class="newstype">
             <div class="row">
                 <div class="col-md-4">
@@ -41,7 +41,7 @@
                     </select>
                 </div>
             </div>
-        </div><br>
+        </div><br>---->
                 <!-------------News------------->
                 <div class="news">
                     <div class="row">
@@ -49,24 +49,36 @@
                             <h5>Add News</h5>
                         </div>
                         <div class="col-md-4">
-                            <textarea class="form-control" name="news" id="news" [(ngModel)]="news" placeholder="Enter News..">
+                            <textarea class="form-control" name="newsDetails" id="newsDetails"  placeholder="Enter News.." ngModel>
                             </textarea>
                         </div>
                     </div>
                 </div><br>
-                <input type="hidden" name="status" id="status" [(ngModel)]="status" value="{{status}}" placeholder="1">
-                <input type="hidden" name="time" id="time" [(ngModel)]="time" value="{{today | date:'dd-MM-yyyy hh:mm:ss a':'+0530'}}">
+                <!--------------Date-->
+                <div class="Date">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h5>Date</h5>
+                            </div>
+                            <div class="col-md-4">
+                                    <input type="date" class="form-control" name="date" id="date"   value="date" ngModel>
+                           </div>
+                        </div>
+                 </div><br>
+                    <!--------------End Date ----------------->
                 <div class="button">
                     <div class="row">
                         <div class="col-md-12">
-                             <button class="btn btn-warning btn-round" (click)="onSubmitnews()"  [disabled]="!personForm.form.valid">Post</button>
-                        |
-                            <input type="reset" class="btn btn-warning btn-round" value="Clear">
+                             <button class="btn  btn-round" type="submit" [disabled]="!personForm.form.valid">Create</button>
                         </div>
                     </div>
                 </div>
+
                 </form>
                 </div><br>
                 <!------------------end news--------------->
         </div>
     </div>
+    <br>
+    <br>
+    <br>

@@ -10,7 +10,6 @@
           <th>Time</th>
           <th>News Heading</th>
           <th>Subject</th>
-          <th> Which Type Of news</th>
            <th>News</th>
            <th>Action</th>
         </tr>
@@ -18,10 +17,9 @@
       <tbody class="bg-light">
         <tr *ngFor="let oldNews of oldNews let i = index">
             <td>{{oldNews.newsid}}</td>
-            <td>{{oldNews.time}}</td>
-            <td>{{oldNews.head}}</td>
+            <td>{{oldNews.date}}</td>
+            <td>{{oldNews.heading}}</td>
             <td>{{oldNews.subject}}</td>
-            <td>{{oldNews.select}}</td>
             <td>{{oldNews.news}}</td>
             <td><a href="#"><img src="assets/img/Delete.png" width="30" height="30"></a>
             <a href="#"><img src="assets/img/edit.png" width="30" height="28"></a></td>

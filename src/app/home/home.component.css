@@ -3,9 +3,6 @@
   background-image:url("/assets/img/bg.jpg");
   background-attachment:fixed;
   opacity:0.9;
-    box-shadow:20px 20px 120px 16px  #FF4F00;  
+/*   box-shadow:20px 20px 120px 16px  #FF4F00;  */
 
-}
-a{
-  background:red;
 }

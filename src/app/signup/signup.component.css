@@ -5,20 +5,25 @@
     padding-top:10px;
     padding-bottom:85px;
   }
+  #head
+  {
+    margin:50px;
+  }
   .container
   {
     background-color:orange;
     border-radius:15px;
-    padding:65px;
+    
     margin-top:80px;
     opacity:0.9;
     height:0 auto;
     border-bottom:6px solid black;
-        box-shadow:20px 20px 120px 16px  black;  
+    box-shadow:20px 20px 120px 16px  black;  
       }
       #msg
       {
-        padding:0px;
+        font-size:15px;
+        margin:-10px;
       }
  
   .login a
@@ -37,9 +42,9 @@
     border-left: 6px solid black;
     height: 450px;
     margin-left: -3px;
-    margin-top:-40px;
-   }
   
+   }
+ 
   @media only screen and (max-width:766px)
    {
     
@@ -57,6 +62,7 @@
          #heading{
            display:none;
          }
+  
          
     div.hr 
          {
@@ -70,6 +76,7 @@
     #p{
      display: none;
     }
+ 
     .v1{
       display: none;
     }

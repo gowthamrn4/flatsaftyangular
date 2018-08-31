@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/Http';
 import {DataService} from '../data.service'
+import { User } from '../user/user';
+import {AuthService} from '../service/auth.service';
 
 @Component({
   selector: 'app-signup',

@@ -9,17 +9,17 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./newnews.component.css']
 })
 export class NewnewsComponent  {
-  status = 1;
-  langs: string[] = [
-    'Function',
-    'Emergency',
-    'InFormation'
-  ]
+
+  // langs: string[] = [
+  //   'Function',
+  //   'Emergency',
+  //   'InFormation'
+  // ]
   newNews:any
   constructor(private dataservice:DataService) { }
   onSubmitnews(value){
     this.dataservice.getnewNews(value).subscribe(res=>{
-      console.log(value);
+      console.log(res);
     })
   }
 }
