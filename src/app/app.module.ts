@@ -97,7 +97,6 @@ var config = {
 })
 export class AppModule { }
 
-<<<<<<< HEAD
 /*export const firebaseConfig = {
   apikey:'',
   authDomain:'',
@@ -106,12 +105,3 @@ export class AppModule { }
   messagingSenderId:''
 };
 */
-=======
-// export const firebaseConfig = {
-//   apikey:'',
-//   authDomain:'',
-//   databaseURL:'',
-//   storageBucket:'',
-//   messagingSenderId:''
-// };
->>>>>>> 8bfd58108f447282b88f30b886b64ef0c46f1323
