@@ -1,0 +1,71 @@
+.content .container
+{
+  background-color:white;
+  opacity:0.9;
+  margin-top:20px;
+ /*box-shadow:20px 20px 120px 16px  #FF4F00;*/  
+ margin:0px auto;
+ /* background-image:url("/assets/img/bright-background-with-dots_1055-3132.jpg");
+ background-attachment:fixed; */
+}
+#head
+{
+    text-align:center;
+   
+}
+#head1
+{
+    font-size:23px;
+   
+}
+.data
+{
+    max-width:500px;
+    margin:0px auto;
+    border:2px solid orange;
+    text-indent: 10px;
+    border-radius:10px;
+   
+    color:white;
+    box-shadow:20px 20px 160px 16px black;  
+}
+#head1
+{
+    text-transform:uppercase;
+}
+option:nth-child(1)
+{
+    background:orange;
+}
+#head
+{
+    text-align:center;
+    font-size:18px;
+    text-transform: uppercase;
+    margin-top:-13px;
+}
+.data h5{
+    text-justify: inter-word;
+    text-align: justify;
+    font-size:16px;
+}
+.data h6{
+    text-align:right;
+    text-align: justify;
+}
+.data h6:nth-child(1)
+{
+    text-transform:capitalize;
+}
+.row
+{
+    margin:0px auto;
+}
+#hr3
+{
+    margin-top:-7px;
+    background:white; 
+}
+hr{
+    background:white;
+}

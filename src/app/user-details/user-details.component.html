@@ -1,0 +1,115 @@
+<br>
+<div class="content">
+    <div class="container"><br>
+        <div class="data bg-warning"><br>
+            <div class="row text-center">
+                <div class="col-md-12 col-sm-6">
+                     <h3 id="head1">Your Details</h3>
+                 </div>
+            </div>
+                         <div class="row text-center">
+                              <div class="col-md-12 col-sm-6">
+                                <hr><h6 id="head">User Details</h6><hr id="hr3">
+                              </div>
+                         </div>
+           <!--------------------Request Details---------------------->
+                <!---------------------Name-------------->
+                <form #personForm="ngForm" (ngSubmit)="userDetails(personForm.value)">
+                                   <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-4">
+                                            Enter Your Name:
+                                        </div>
+                                        <div class="col-md-8 col-sm-8 col-8">
+                                          <input type="text" name="name" id="name" class="form-control" placeholder="Enter Your Name" required ngModel>
+                                       </div>
+                                   </div>   <br>
+                                     <!-------------Name End-->
+<!---------------Block----------->
+<div class="row">
+    <div class="col-md-4 col-sm-4 col-4">
+       Select Category
+    </div>
+        <div class="col-md-8 col-sm-8 col-8">
+            <select class="form-control" placeholder="Select"  id="category" name="category" required ngModel>
+                  <option value="" disabled selected>Select your option</option>
+                  <option>OWNER</option>
+                  <option>Tenunt</option>
+         </select>
+    </div>
+</div>          
+<br>
+            <!-----------------Blcok End--------->
+<div class="row">
+    <div class="col-md-4 col-sm-4 col-4">
+         Select Your Block
+   </div>
+  <div class="col-md-8 col-sm-8 col-8">
+      <select id="block" name="block" class="form-control" required ngModel>
+          <option value="" disabled selected>Select your option</option>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+          <option>E</option>
+          <option>F</option>
+    </select>
+  </div>
+</div>
+ <br>
+
+
+ <div class="row">
+     <div class="col-md-4 col-sm-4 col-4">
+         Select your Floor 
+    </div>
+  <div class="col-md-8 col-sm-8 col-8">
+      <select class="form-control" id="floor" name="floor" required ngModel>
+         <option value="" disabled selected>Select your option</option>
+         <option>First</option>
+         <option>Second</option>
+         <option>Third</option>
+         <option>Fourth</option>
+     </select>
+   </div>
+ </div>  
+ <br>
+
+ <div class="row">
+      <div class="col-md-4 col-sm-4 col-4">
+           Select Flat No:
+      </div>
+            <div class="col-md-8 col-sm-8 col-8">
+                 <select id="flat" name="flat" class="form-control" required ngModel>
+                      <option value="" disabled selected>Select your option</option>
+                      <option>S1</option>
+        <option>F1</option>
+        <option>E1</option>
+        <option>G1</option>
+        <option>A2</option>
+     </select>
+   </div>
+ </div>      
+ <br>
+       
+ <div class="row">
+   <div class="col-md-4 col-sm-4 col-4">
+     Your Contact 
+   </div>
+    <div class="col-md8 col-sm-8 col-8">
+    <input type="text" name="contact" id="contact" placeholder="Enter Your Contact" class="form-control" required ngModel>
+    </div>
+   </div> <br>
+   <!---------------------------------button---------------->
+
+   <div class="row text-center">
+     <div class="col-md-12 col-sm-12 col-12">
+       <button type="submit" [disabled]="!personForm.form.valid" name="submit" class="btn btn-light btn-round" data-toggle="modal" data-target="#myModal">Submit</button>
+     </div>
+   </div>
+   </form>
+   <br>
+   <br>
+   
+</div>
+ <!-- The Modal -->
+<!-- The Modal -->

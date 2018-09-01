@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
@@ -28,6 +28,7 @@ import {AuthService} from './service/auth.service';
 import { NewMaintenanceViewPageComponent } from './new-maintenance-view-page/new-maintenance-view-page.component';
 import { NewRequestViewpageComponent } from './new-request-viewpage/new-request-viewpage.component';
 import { NewComplaintViewPageComponent } from './new-complaint-view-page/new-complaint-view-page.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 
@@ -58,7 +59,8 @@ var config = {
     SignupComponent,
     NewMaintenanceViewPageComponent,
     NewRequestViewpageComponent,
-    NewComplaintViewPageComponent
+    NewComplaintViewPageComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +86,8 @@ var config = {
       { path:'oldmaintenance',component:OldmaintenanceComponent},
       { path:'newmaintenanceviewpage/:id',component:NewMaintenanceViewPageComponent},
       { path:'newrequestviewpage/:id',component:NewRequestViewpageComponent},
-      { path:'newcomplaintviewpage/:id',component:NewComplaintViewPageComponent}
+      { path:'newcomplaintviewpage/:id',component:NewComplaintViewPageComponent},
+      { path:'userdetails',component:UserDetailsComponent}
     ]},
        ])
 
