@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/Http';
 import {DataService} from '../data.service'
 import { User } from '../user/user';
 import {AuthService} from '../service/auth.service';
+import { Router } from '@angular/router';
+import {AngularFireAuth} from 'angularfire2/auth';
 
 @Component({
   selector: 'app-signup',
@@ -11,16 +13,31 @@ import {AuthService} from '../service/auth.service';
 })
 
 export class SignupComponent  {
-
-  constructor(private dataservice:DataService){}
+  user={} as User
+  userId={
+    uid:''
+  }
+  email = '';
+  password = '';
+  errorMessage = '';
+  error: {name: string, message: string} = {name: '', message: ''};
+  constructor(private dataservice:DataService,public authService: AuthService, private router : Router,private afauth:AngularFireAuth){}
   // onSubmit = function (user) {
   //   console.log(user);
   // }
-  onSubmit(value){
-    this.dataservice.newUser(value).subscribe(res=>{
-      console.log
+  onSignup(user){
+    this.afauth.auth.createUserWithEmailAndPassword(user.email,user.password)
+    .then(data=>{
+      this.userId.uid=this.afauth.auth.currentUser.uid;
+      alert('Registered !')
+      this.router.navigate(['landpage/userdetails'])
+     
     })
+    .catch(error=>{
+     alert(error.message);
+    });
+    console.log(user.email,user.password)
   }
 }
-            
+        
 

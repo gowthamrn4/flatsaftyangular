@@ -65,7 +65,7 @@ export class DataService {
    
   }
   postuserDetail(value){
-    return this.http.post('http://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/userdetails',value)
+    return this.http.post('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/userdetails',value)
     .pipe(map(data=>this.userDetail=data.json()))
    
   }
