@@ -22,7 +22,7 @@ export class UserDetailsComponent  {
          this.router.navigate(['/login'])
       }
     else{
-      alert("Failed");
+      alert("Faihled");
     }
     })
   }
