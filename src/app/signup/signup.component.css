@@ -3,7 +3,7 @@
     background-image:url("/assets/img/bg.jpg");
     background-attachment:fixed;
     padding-top:10px;
-    padding-bottom:85px;
+    padding-bottom:115px;
   }
   #head
   {
@@ -13,7 +13,6 @@
   {
     background-color:orange;
     border-radius:15px;
-    
     margin-top:80px;
     opacity:0.9;
     height:0 auto;
@@ -41,7 +40,7 @@
   {
     border-left: 6px solid black;
     height: 450px;
-    margin-left: -3px;
+   
   
    }
  

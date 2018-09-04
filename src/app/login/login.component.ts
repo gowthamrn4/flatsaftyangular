@@ -7,6 +7,7 @@ import { User } from '../user/user';
 import {AuthService} from '../service/auth.service';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,21 +18,13 @@ export class LoginComponent implements OnInit {
   password = '';
   errorMessage = '';
   error: {name: string, message: string} = {name: '', message: ''};
-newLogin:any
+  newLogin:any
   constructor( private router : Router,
                private dataservice:DataService,
-               public authService: AuthService) { }
-  ngOnInit() {
-    this.dataservice.getnewLogin().subscribe(res => {
-      this.newLogin = res;
-      for (var i = 0; i < this.newLogin.length; i++) {
-
-        console.log(res);
-      }
-
-    })
-  }
-onLogin(): void {
+               public authService: AuthService,
+              ) { }
+  ngOnInit() {}
+  onLogin(): void {
   if (this.validateForm(this.email, this.password)) {
     this.authService.loginWithEmail(this.email, this.password)
       .then(() => this.router.navigate(['/landpage']))

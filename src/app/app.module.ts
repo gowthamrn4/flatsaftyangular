@@ -29,7 +29,7 @@ import { NewMaintenanceViewPageComponent } from './new-maintenance-view-page/new
 import { NewRequestViewpageComponent } from './new-request-viewpage/new-request-viewpage.component';
 import { NewComplaintViewPageComponent } from './new-complaint-view-page/new-complaint-view-page.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
-
+import {ShareService} from './service/share.service';
 
 
 var config = {
@@ -72,6 +72,7 @@ var config = {
       { path:'',pathMatch:'full',redirectTo:'login' },
       { path:'login',component:LoginComponent},
       { path:'signup',component:SignupComponent},
+      { path:'userdetails',component:UserDetailsComponent},
       { path:'landpage',component:LandpageComponent,
     children:[
       { path:'',pathMatch:'full',redirectTo:'home'},
@@ -87,7 +88,7 @@ var config = {
       { path:'newmaintenanceviewpage/:id',component:NewMaintenanceViewPageComponent},
       { path:'newrequestviewpage/:id',component:NewRequestViewpageComponent},
       { path:'newcomplaintviewpage/:id',component:NewComplaintViewPageComponent},
-      { path:'userdetails',component:UserDetailsComponent}
+      
     ]},
        ])
 
@@ -95,7 +96,7 @@ var config = {
   ],
   
   providers: [DataService,
-              AuthService],
+              AuthService,ShareService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

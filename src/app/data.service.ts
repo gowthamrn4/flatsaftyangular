@@ -27,9 +27,10 @@ export class DataService {
   news:any;
   userDetail;any;
   status:any;
-  url:"http://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/newnews";
+  currentprofile:any;
   
-
+  
+  
   constructor( private http:Http,private router:Router) { }
   ngOnInit()
   {
@@ -65,7 +66,7 @@ export class DataService {
    
   }
   postuserDetail(value){
-    return this.http.post('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/userdetails',value)
+    return this.http.post('https://flatsafety.herokuapp.com/adminUsers/createAdmin',value)
     .pipe(map(data=>this.userDetail=data.json()))
    
   }
@@ -93,12 +94,10 @@ export class DataService {
     return this.http.get('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/oldmaintenance')
     .pipe(map(data=>this.oldMaintenance=data.json()))
   }
-  // getNews(){
-  //    return this.http.get('https://flatsafety.herokuapp.com/news/createNews')
-  //   .pipe(map(data=>this.oldNews=data.json()))
-  // }
-  getnewLogin()
-  {
-    return this.http.get('https://5b7e6d68adf2070014bfa35c.mockapi.io/api/v1/fslogin')
-  }
+ 
+  findUser(value){
+    return this.http.post('https://flatsafety.herokuapp.com/adminUsers/findAdmin',value)
+    .pipe(map(data=>this.currentprofile=data.json()))
+}
+ 
 }

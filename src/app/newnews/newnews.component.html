@@ -15,7 +15,7 @@
                     <h5>Add News heading</h5>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="heading" id="heading"  class="form-control" placeholder="Add Heading"required  ngModel>
+                    <input type="text" name="heading"  [(ngModel)]="newsDetail.heading"  class="form-control" placeholder="Add Heading"required  ngModel>
                 </div>
             </div><br>
             <div class="row">
@@ -23,7 +23,7 @@
                     <h5>News Subject</h5>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="subject"  id="subject"  class="form-control" placeholder="Add Subject" required  ngModel>
+                    <input type="text" name="subject"  [(ngModel)]="newsDetail.subject"  class="form-control" placeholder="Add Subject" required  ngModel>
                 </div>
             </div><br>
             <!-----------type of news-----------
@@ -49,7 +49,7 @@
                             <h5>Add News</h5>
                         </div>
                         <div class="col-md-4">
-                            <textarea class="form-control" name="newsDetails" id="newsDetails"  placeholder="Enter News.." ngModel>
+                            <textarea class="form-control" name="newsDetails" [(ngModel)]="newsDetail.newsDetails"  placeholder="Enter News.." ngModel>
                             </textarea>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                                 <h5>Date</h5>
                             </div>
                             <div class="col-md-4">
-                                    <input type="date" class="form-control" name="date" id="date"   value="date" ngModel>
+                                    <input type="date" class="form-control" name="date" [(ngModel)]="newsDetail.date"value="date" ngModel>
                            </div>
                         </div>
                  </div><br>

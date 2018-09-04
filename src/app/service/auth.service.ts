@@ -19,7 +19,9 @@ export class AuthService {
   loginWithEmail(email: string, password: string) {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then((user) => {
-        this.authState = user
+        console.log(user);
+        return user;
+        // this.authState = user
       })
       .catch(error => {
         console.log(error)

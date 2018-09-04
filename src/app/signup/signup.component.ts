@@ -21,7 +21,10 @@ export class SignupComponent  {
   password = '';
   errorMessage = '';
   error: {name: string, message: string} = {name: '', message: ''};
-  constructor(private dataservice:DataService,public authService: AuthService, private router : Router,private afauth:AngularFireAuth){}
+  constructor(private dataservice:DataService,
+              public authService: AuthService,
+              private router : Router,
+              private afauth:AngularFireAuth){}
   // onSubmit = function (user) {
   //   console.log(user);
   // }
@@ -29,14 +32,15 @@ export class SignupComponent  {
     this.afauth.auth.createUserWithEmailAndPassword(user.email,user.password)
     .then(data=>{
       this.userId.uid=this.afauth.auth.currentUser.uid;
+      console.log(this.userId.uid)
       alert('Registered !')
-      this.router.navigate(['landpage/userdetails'])
+      this.router.navigate(['userdetails'])
      
     })
     .catch(error=>{
      alert(error.message);
     });
-    console.log(user.email,user.password)
+    console.log(user.email,user.password,this.userId.uid)
   }
 }
         
