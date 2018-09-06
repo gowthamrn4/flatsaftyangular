@@ -7,8 +7,6 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { AngularFireModule } from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
-
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { LandpageComponent } from './landpage/landpage.component';
@@ -30,7 +28,7 @@ import { NewRequestViewpageComponent } from './new-request-viewpage/new-request-
 import { NewComplaintViewPageComponent } from './new-complaint-view-page/new-complaint-view-page.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import {ShareService} from './service/share.service';
-
+import { Ng2PopupModule } from 'ng2-popup';
 
 var config = {
   apiKey: "AIzaSyD-tiwmRUCcS1cgrQJDlLsYNRl5TpWQdr8",

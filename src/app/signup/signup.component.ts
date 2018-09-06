@@ -5,6 +5,7 @@ import { User } from '../user/user';
 import {AuthService} from '../service/auth.service';
 import { Router } from '@angular/router';
 import {AngularFireAuth} from 'angularfire2/auth';
+import { AlertsModule } from 'angular-alert-module';
 
 @Component({
   selector: 'app-signup',
@@ -25,6 +26,8 @@ export class SignupComponent  {
               public authService: AuthService,
               private router : Router,
               private afauth:AngularFireAuth){}
+
+            
   // onSubmit = function (user) {
   //   console.log(user);
   // }
@@ -37,8 +40,9 @@ export class SignupComponent  {
       this.router.navigate(['userdetails'])
      
     })
-    .catch(error=>{
-     alert(error.message);
+    .catch(_error=>{
+      this.error = _error
+      this.router.navigate(['/signup'])
     });
     console.log(user.email,user.password,this.userId.uid)
   }

@@ -54,7 +54,7 @@ validateForm(email: string, password: string): boolean {
 
   return true
 }
-  
+
 } 
    
 

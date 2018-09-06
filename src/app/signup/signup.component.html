@@ -19,8 +19,14 @@
 
                <div class="hr">
                </div>
-
+            
                <div class="col-md-4 col-sm-12" style="padding:40px;">
+                <div id="msg" *ngIf="!isNewUser">
+                    <p *ngIf="errorMessage.length > 0" class="alert alert-danger alert-dismissible fade show">
+                        {{errorMessage}}</p>
+                    <p  *ngIf="error.message.length > 0" class="alert alert-danger alert-dismissible fade show">
+                        {{error.message}}</p>
+                </div>
                    <form #personForm="ngForm"(ngSubmit)="onSignup(personForm.value)">
                          <div class="login">
                                <div class="form-group">
@@ -53,7 +59,7 @@
                                                </div>
 
                                                <div class="col-md-12 text-center">
-                                                     <button type="submit" class="btn btn-default" [disabled]="!personForm.form.valid"><span style="color:black">Signup</span></button> 
+                                                     <button type="submit" class="btn btn-default" [disabled]="!personForm.form.valid"><span style="color:black"data-toggle="modal" data-target="#myModal">Signup</span></button> 
                                                </div>
                                                         <div class="col-md-12 text-center">
                                                             <a routerLink="/login"><p>Alread You Have Account ?</p></a>
